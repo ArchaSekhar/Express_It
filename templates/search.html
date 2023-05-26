@@ -1,0 +1,21 @@
+{%extends 'base.html'%}
+{%block title%}Search Results{%endblock%}
+{%block content%}
+<session id="blog">
+    <div class="heading">
+        <span>Search Results</span>
+    </div>
+</session>
+<div class="container">
+    {% for item in all_blogs %} 
+        <div class="cards" style="width: 18rem;">
+            <img src="static\image\img.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+            <h5 class="card-title">{{ item.title }}</h5>
+            <p class="card-text">{{ item.summary}}</p>
+            <a href="/{{item.id}}" class="btn btn-success">Read More</a>
+            </div>
+        </div>
+   {% endfor %}
+</div>
+{%endblock%}

@@ -1,0 +1,31 @@
+{%extends 'base.html'%}
+{%block title%}Add Blog{%endblock%}
+{%block content%}
+<form action="/create" method="POST">
+    <h3>Create your own blog!</h3>
+    <div class="mb-3">
+        <label for="title" class="form-label">Title</label>
+        <input type="text" class="form-control" name="title" required>
+      </div>
+    <div class="mb-3">
+      <label for="author" class="form-label">Author</label>
+      <input type="text" class="form-control" name="author" aria-describedby="msg" >
+      <div id="msg" class="form-text">If interested.</div>
+    </div>
+    <div class="mb-3">
+      <label for="category" class="form-label">Category</label><br>
+      <input type="text" class="form-control" name="cat" required>
+    </div>
+    <div class="mb-3">
+      <label for="summary" class="form-label">Summary</label>
+      <input type="text" class="form-control" name="sum" required>
+    </div>
+    <div class="mb-3">
+      <label for="content" class="form-label">Content</label><br>
+      <textarea name="con" rows="15" cols="105" required></textarea>
+    </div>
+    <div class="mb-3">
+    <button type="submit" class="btn btn-success">Create blog</button>
+    </div>
+</form>
+{%endblock%}
